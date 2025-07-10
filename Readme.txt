@@ -1,0 +1,2 @@
+This is the code for "Learning Decoupled Features with Perceptual Distillation for Blind Image Quality Assessment", which has been submit to IEEE Transactions on Image 
+Processing. The code will be released.
