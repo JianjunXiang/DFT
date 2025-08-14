@@ -1,0 +1,47 @@
+# model
+o_channel: 768
+h_channel: 64
+p_channel: 128
+o_h: 7
+o_w: 7
+
+# dataset
+# Baidu Cloud Disk : https://pan.baidu.com/s/1MxS0S438h7RHYN6dLMT-Ug?pwd=biqa
+# password: biqa
+# Download and put it under the "dataset" file
+type: 'IQA'
+dataset_name: 'KONIQ'
+dataset_path: '/home/xiangjj/dataset/KonIQ/'
+dataset_label: '/home/xiangjj/dataset/KonIQ/koniq10k_scores_and_distributions.csv'
+
+# optimization
+batch_size: 16
+lr: !!float 3e-5
+wd: !!float 1e-5
+n_epoch: 50
+T_max: 50
+eta_min: 0
+num_avg_val: 5
+num_worker: 4
+drop_ratio: !!float 0.5
+
+# hyperparameter
+seed: 20
+train_size: !!float 0.8
+crop_size: 224
+prob_aug: 0.7
+splits_num: 10
+lambda_k: 0.01
+
+# save checkpoint
+model_name: 'swin_tiny_KonIQ'
+type_name: 'KONIQ'
+ckpt_path: './checkpoint/KonIQ/'
+resume: None
+load_ckpt: None
+
+# fragments:
+fragments: True
+# pretrained weight: https://github.com/JianjunXiang/DFT
+# download and put it under the "pretrained_model" file
+pr_model_path: './pretrained_model/pretrained_swin.pth'
